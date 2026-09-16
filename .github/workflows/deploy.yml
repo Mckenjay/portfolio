@@ -1,4 +1,4 @@
-name: Deploy Portfolio to Github Pages
+name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
@@ -28,9 +28,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: "npm"
-      
-      - name: Install Dependencies
+          cache: npm
+
+      - name: Install dependencies
         run: npm ci
 
       - name: Build
@@ -54,6 +54,6 @@ jobs:
     needs: build
 
     steps:
-      name: Deploy to Github Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
