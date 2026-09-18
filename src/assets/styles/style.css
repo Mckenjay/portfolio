@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+#app {
+  font-family: 'Space Mono';
+}
+
+:root {
+    /* Default Indigo Accent */
+    --accent-rgb: 99, 102, 241;
+}
+
+/* Hide scrollbar for clean presentation */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+body {
+    @apply bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 font-sans antialiased overflow-hidden transition-colors duration-500;
+}
+/* Smooth Snap Scrolling */
+.snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+.snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+[x-cloak] { display: none !important; }
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    @apply bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl border border-white/40 dark:border-zinc-700/50 shadow-xl rounded-3xl transition-all duration-300;
+}
+.glass-panel:hover {
+    @apply border-white/60 dark:border-zinc-600/80 shadow-2xl;
+}
