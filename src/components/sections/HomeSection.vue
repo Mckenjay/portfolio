@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 </script>
 <template>
@@ -10,10 +10,10 @@
 
             <h2>Software Developer</h2>
 
-            <p>
+             <p>
                 I build practical web applications and software
                 solutions that help make everyday tasks easier.
-            </p>
+            </p> 
 
             <div>
                 <a href="#projects">
