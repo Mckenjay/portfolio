@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import Portfolio from '@/views/Portfolio.vue'
+import Portfolio from '@/views/Portfolio.vue';
 </script>
 
 <template>
-  <Portfolio />
+    <Portfolio />
 </template>
+
+<style scoped></style>
