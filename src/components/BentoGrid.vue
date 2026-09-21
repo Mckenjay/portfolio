@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<{
 const gridStyle = computed(() => ({
   '--bento-columns': String(props.columns),
   '--bento-tablet-columns': String(Math.min(props.tabletColumns, props.columns)),
-  '--bento-row-height': `${props.rowHeight}px`,
+  '--bento-row-height': `clamp(70px, 8vh, ${props.rowHeight}px)`,
   '--bento-gap': props.gap,
   '--bento-max-width': props.maxWidth,
 }))

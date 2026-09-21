@@ -4,7 +4,7 @@ import BentoGrid from '@/components/BentoGrid.vue'
 </script>
 
 <template>
-  <section id="bento-demo" class="portfolio-section bento-demo">
+  <section id="about" class="portfolio-section bento-demo">
     <BentoGrid>
         <BentoCard :width="2" :height="2" class="cell-hero">
             <span class="tag">Featured</span>

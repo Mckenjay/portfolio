@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
 const props = defineProps({
@@ -14,9 +14,10 @@ const starColors = [
     'text-pink-200',
     'text-purple-200'
 ];
+
 const starShapes = ['•', '✦', '✧', '+', '×', '★', '✸'];
 
-const stars = ref([]);
+const stars = ref<{ id: number; color: string; shape: string; left: string; top: string; duration: number }[]>([]);
 
 const generateStars = () => {
     stars.value = Array.from({ length: props.starCount }, (_, index) => ({
@@ -35,9 +36,18 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="absolute inset-0 overflow-hidden opacity-50 pointer-events-none">
-        <div v-for="star in stars" :key="star.id" class="absolute text-xs md:text-sm" :class="star.color"
-            :style="{ left: star.left, top: star.top, animation: `twinkle ${star.duration}s infinite` }">
+    <div class="fixed inset-0 z-0 overflow-hidden opacity-50 pointer-events-none">
+        <div
+            v-for="star in stars"
+            :key="star.id"
+            class="absolute text-xs md:text-sm"
+            :class="star.color"
+            :style="{
+                left: star.left,
+                top: star.top,
+                animation: `twinkle ${star.duration}s infinite`
+            }"
+        >
             {{ star.shape }}
         </div>
     </div>
@@ -45,9 +55,7 @@ onMounted(() => {
 
 <style>
 @keyframes twinkle {
-
-    0%,
-    100% {
+    0%, 100% {
         opacity: 0;
     }
 
