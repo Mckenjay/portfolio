@@ -25,41 +25,55 @@ const cardStyle = computed(() => ({
 <template><component :is="as" class="bento-card" :style="cardStyle"><slot /></component></template>
 
 <style scoped>
-.bento-card { 
-    position: relative; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    min-width: 0; 
-    padding: 1.75rem; 
-    overflow: hidden; 
-    border: 1px solid rgba(255,255,255,.12); 
-    border-radius: 1.25rem; 
-    background: rgba(255,255,255,.06); 
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 4px 24px rgba(0,0,0,.25); 
-    color: rgba(255,255,255,.85); 
-    font-family: 'Space Mono', Inter, 'Segoe UI', system-ui, sans-serif; 
-    backdrop-filter: blur(18px) saturate(1.4); 
-    -webkit-backdrop-filter: blur(18px) saturate(1.4); 
-    grid-column: span var(--bento-card-columns); 
-    grid-row: span var(--bento-card-rows); 
-    transition: transform .35s cubic-bezier(.22,1,.36,1), 
-    box-shadow .35s cubic-bezier(.22,1,.36,1), 
-    border-color .35s ease; 
+.bento-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 24px;
+    border-radius: 30px;
+    background: #0F0F0F;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+    color: #fff;
+    font-family: 'Space Mono', Inter, 'Segoe UI', system-ui, sans-serif;
+    grid-column: span var(--bento-card-columns);
+    grid-row: span var(--bento-card-rows);
+    transition: box-shadow .4s ease, transform .3s ease;
 }
-.bento-card::after { 
-    content: ''; position: absolute; 
-    inset: 0; border-radius: inherit; 
-    pointer-events: none; opacity: 0; 
-    background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 50%); 
-    transition: opacity .35s ease; 
+
+.bento-card::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    pointer-events: none;
+    border-radius: 30px;
+    opacity: .25;
+    background: linear-gradient(120deg, rgba(255,255,255,.3), rgba(255,255,255,.05));
 }
-.bento-card:hover { 
-    transform: translateY(-4px) scale(1.015); 
-    border-color: rgba(255,255,255,.22); 
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 12px 40px rgba(0,0,0,.35); 
+
+.bento-card::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border-radius: inherit;
+    pointer-events: none;
+    margin: -1px;
+    background: linear-gradient(120deg, rgba(255,255,255,.12), rgba(255,255,255,.01));
 }
-.bento-card:hover::after { opacity: 1; }
+
+.bento-card :deep(*) { position: relative; z-index: 2; }
+.bento-card:hover {
+    box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, .1);
+}
 
 @media (max-width: 900px) { .bento-card { grid-column: span var(--bento-card-columns-tablet); grid-row: span var(--bento-card-rows-tablet); } }
 @media (max-width: 520px) { .bento-card { grid-column: span var(--bento-card-columns-mobile); grid-row: span var(--bento-card-rows-mobile); min-height: 140px; } }
