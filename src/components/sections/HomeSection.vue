@@ -231,7 +231,8 @@ onUnmounted(() => {
 .tech-badge:hover { 
     border-color: rgba(251, 146, 60, 0.3); 
     background: rgba(251, 146, 60, 0.08); 
-    color: #fb923c;
+    color: #ff8904;
+    /*color: #fb923c;*/
 } 
 
 .tech-badge::after {
@@ -270,7 +271,7 @@ onUnmounted(() => {
     position: absolute;
     top: -1.05rem;
     left: 0;
-    color: #fb923c;
+    color: #ff8904;
     /*color: white;*/
     font-size: 0.7rem;
     font-weight: 700;
