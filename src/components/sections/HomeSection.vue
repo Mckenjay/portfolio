@@ -99,148 +99,60 @@ onUnmounted(() => {
                 <!-- ===================================================== CARD 4 — TECHNOLOGY STACK ===================================================== --> 
                 <BentoCard :width="2" :height="1"> 
                     <div class="flex h-full flex-col justify-center"> 
-                        <p class="text-xs uppercase tracking-widest text-gray-500" > Tech I've worked with </p> 
-                        <div class="mt-3 flex flex-wrap gap-2"> 
-                            <span class="tech-badge"><Icon icon="fa6-brands:laravel" class="h-6 w-6" /></span>  
-                            <span class="tech-badge"><Icon icon="fa6-brands:php" class="h-6 w-6" /></span> 
-                            <span class="tech-badge"><Icon icon="fa6-brands:vuejs" class="h-6 w-6" /></span> 
-                            <span class="tech-badge"><Icon icon="bi:typescript" class="h-6 w-6" /></span> 
-                            <span class="tech-badge"><Icon icon="fa6-brands:css3-alt" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="bi:javascript" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="flowbite:html-solid" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="fa6-brands:flutter" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="bxl:firebase" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="bxl:supabase" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="fluent:code-vb-16-regular" class="h-6 w-6" /></span>  
-                            <span class="tech-badge"><Icon icon="fa6-brands:wordpress" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="fa6-brands:elementor" class="h-6 w-6" /></span>
-                            <span class="tech-badge"><Icon icon="fa6-brands:github" class="h-6 w-6" /></span>
-                            
+                        <p class="text-sm font-bold uppercase tracking-widest text-gray-500" > Tech I've worked with </p> 
+                        <div class="tech-categories mt-2"> 
+                            <span class="tech-badge tech-badge--category" data-tech="Vue.js"><span class="tech-category-title">Frontend</span><Icon icon="fa6-brands:vuejs" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="TypeScript"><Icon icon="bi:typescript" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="CSS3"><Icon icon="fa6-brands:css3-alt" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="JavaScript"><Icon icon="bi:javascript" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="HTML5"><Icon icon="flowbite:html-solid" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="Bootstrap"><Icon icon="fa6-brands:bootstrap" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="Tailwind"><Icon icon="fa7-brands:tailwind-css" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category-end" data-tech="Flutter"><Icon icon="fa6-brands:flutter" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category" data-tech="Laravel"><span class="tech-category-title">Backend</span><Icon icon="fa6-brands:laravel" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="PHP"><Icon icon="fa6-brands:php" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category-end" data-tech="VB.NET"><Icon icon="fluent:code-vb-16-regular" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category" data-tech="MySQL"><span class="tech-category-title">Databases</span><Icon icon="fontisto:mysql" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="Firebase"><Icon icon="bxl:firebase" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category-end" data-tech="Supabase"><Icon icon="bxl:supabase" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category" data-tech="WordPress"><span class="tech-category-title">Tools</span><Icon icon="fa6-brands:wordpress" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="Elementor"><Icon icon="fa6-brands:elementor" class="h-6 w-6" /></span>
+                            <span class="tech-badge" data-tech="GitHub"><Icon icon="fa6-brands:github" class="h-6 w-6" /></span>
+                            <span class="tech-badge tech-badge--category-end" data-tech="Git"><Icon icon="fa6-brands:git-alt" class="h-6 w-6" /></span>
                         </div> 
                     </div> 
                 </BentoCard> 
                 <BentoCard :width="2" :height="1">
-                    <div class="flex h-full flex-col justify-between">
-                
-                        <!-- Heading -->
-                        <div>
-                            <p class="text-sm font-bold uppercase tracking-widest text-gray-400">
-                                Let's Connect
-                            </p>
-                
-                            <h2 class="mt-2 text-xl font-bold text-white">
-                                Interested in working together?
-                            </h2>
-                        </div>
-                
-                        <!-- Main actions -->
-                        <div class="mt-6 flex flex-wrap gap-3"> 
-                            <a href="#projects" class="rounded-lg bg-orange-400 px-4 py-2 text-sm font-semibold text-black no-underline transition hover:bg-orange-300" > 
-                                View Projects 
-                            </a> 
-                            <a href="#contact" class="rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition hover:bg-white/10" > 
-                                Contact Me 
-                            </a> 
-                        </div> 
-                    </div>
-                </BentoCard>
-
-                <BentoCard :width="2" :height="1">
                         <div class="flex h-full flex-col">
-                
-                            <!-- Header -->
                             <div>
                                 <p class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">
                                     Let's Connect
                                 </p>
-                
                                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-white">
                                     Interested in working together?
                                 </h2>
-                
-                                <p class="mt-1 text-sm text-gray-400">
+                                <!-- <p class="mt-1 text-sm text-gray-400">
                                     Let's connect and discuss opportunities or projects.
-                                </p>
+                                </p> -->
                             </div>
-                
-                            <!-- Main Actions -->
+
                             <div class="mt-auto pt-6 flex flex-wrap gap-3">
                                 <a
                                     href="#projects"
-                                    class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5 hover:text-black hover:bg-orange-400"
+                                    class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
+                                    
                                 >
                                     <span>View Projects</span>
                                     <Icon icon="lucide:arrow-up-right" class="h-4 w-4"/>
                                 </a>
                 
                                 <a href="#contact"
-                                    class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
+                                    class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white"
                                 >
                                     <span>Contact Me</span>
                                     <Icon icon="lucide:mail" class="h-4 w-4" />
                                 </a>
                             </div>
-                
-                            <!-- Social Links -->
-                            <!-- <div
-                                class="mt-5 flex items-center gap-5
-                                       border-t border-white/10 pt-4"
-                            >
-                
-                                <a
-                                    href="https://github.com/yourusername"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="group inline-flex items-center gap-2
-                                           text-xs text-gray-400 transition-colors
-                                           hover:text-white"
-                                    aria-label="GitHub"
-                                >
-                                    <Icon
-                                        icon="simple-icons:github"
-                                        class="h-4 w-4 transition-transform duration-300
-                                               group-hover:scale-110"
-                                    />
-                
-                                    <span>GitHub</span>
-                                </a>
-                
-                                <a
-                                    href="https://www.linkedin.com/in/yourusername"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="group inline-flex items-center gap-2
-                                           text-xs text-gray-400 transition-colors
-                                           hover:text-white"
-                                    aria-label="LinkedIn"
-                                >
-                                    <Icon
-                                        icon="simple-icons:linkedin"
-                                        class="h-4 w-4 transition-transform duration-300
-                                               group-hover:scale-110"
-                                    />
-                
-                                    <span>LinkedIn</span>
-                                </a>
-                
-                                <a
-                                    href="mailto:your@email.com"
-                                    class="group inline-flex items-center gap-2
-                                           text-xs text-gray-400 transition-colors
-                                           hover:text-white"
-                                    aria-label="Email"
-                                >
-                                    <Icon
-                                        icon="lucide:mail"
-                                        class="h-4 w-4 transition-transform duration-300
-                                               group-hover:scale-110"
-                                    />
-                
-                                    <span>Email</span>
-                                </a>
-                
-                            </div> -->
-                
                         </div>
                     </BentoCard>
                 
@@ -305,6 +217,7 @@ onUnmounted(() => {
 }
 
 .tech-badge { 
+    position: relative;
     display: inline-flex; 
     align-items: center; 
     border: 1px solid rgba(255, 255, 255, 0.08); 
@@ -318,8 +231,64 @@ onUnmounted(() => {
 .tech-badge:hover { 
     border-color: rgba(251, 146, 60, 0.3); 
     background: rgba(251, 146, 60, 0.08); 
-    color: rgb(251, 146, 60); 
+    color: #fb923c;
 } 
+
+.tech-badge::after {
+    position: absolute;
+    bottom: calc(100% + 0.45rem);
+    left: 50%;
+    z-index: 10;
+    content: attr(data-tech);
+    transform: translateX(-50%) translateY(0.25rem);
+    border-radius: 0.35rem;
+    background: rgb(31, 31, 31);
+    padding: 0.3rem 0.45rem;
+    color: white;
+    font-size: 0.7rem;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.tech-badge:hover::after {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.tech-categories {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.4rem;
+    row-gap: 1.25rem;
+    padding-top: 0.8rem;
+}
+
+.tech-category-title {
+    position: absolute;
+    top: -1.05rem;
+    left: 0;
+    color: #fb923c;
+    /*color: white;*/
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.tech-categories .tech-badge {
+    padding: 0.45rem;
+}
+
+.tech-badge--category {
+    position: relative;
+}
+
+.tech-badge--category-end {
+    margin-right: 0.5rem;
+}
 
 @keyframes cursor-blink {
   50% {
