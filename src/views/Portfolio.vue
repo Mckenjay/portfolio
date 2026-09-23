@@ -15,9 +15,9 @@ import ContactSection from '@/components/sections/ContactSection.vue';
             <NavBar />
             <main>
                 <HomeSection />
-                <AboutSection />
+                 <AboutSection />
                 <ProjectsSection />
-                <ContactSection />
+                <ContactSection /> 
             </main>
         </div>
     </div>
