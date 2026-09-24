@@ -61,42 +61,18 @@ onUnmounted(() => {
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-lg" > 
                             I build practical web applications using Laravel, Vue.js and modern web technologies. 
                         </p>
-                        <!-- <div class="mt-6 flex flex-wrap gap-3"> 
-                            <a href="#projects" class="rounded-lg bg-orange-400 px-4 py-2 text-sm font-semibold text-black no-underline transition hover:bg-orange-300" > 
-                                View Projects 
-                            </a> 
-                            <a href="#contact" class="rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition hover:bg-white/10" > 
-                                Contact Me 
-                            </a> 
-                        </div>  -->
                     </div> 
                 </BentoCard> 
-                <!-- ===================================================== CARD 2 — PROFILE ===================================================== --> 
                 <BentoCard :width="1" :height="2"> 
                     <div class="flex h-full flex-col items-center justify-center text-center"> 
-                        <!-- Replace with your actual photo --> 
-                        <div class="mb-4 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5" > 
+                        <div class="mb-4 flex h-26 w-26 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5" > 
                             <span class="text-3xl"> <img class="bg-orange-400" :src="profile" alt="Profile" /> </span> 
                         </div> 
                         <h2 class="text-lg font-bold text-white"> Ted Bryan </h2> 
                         <p class="mt-1 text-xs text-gray-400"> IT Graduate </p> 
                         <p class="mt-3 text-xs text-gray-500"> Software Development </p> 
                     </div> 
-                </BentoCard> 
-                <!-- ===================================================== CARD 3 — CURRENT FOCUS ===================================================== --> 
-                <!-- <BentoCard :width="2" :height="1"> 
-                    <div class="flex h-full items-center gap-5"> 
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-400/10 text-xl" > 
-                            <span class="text-orange-400"> &lt;/&gt; </span> 
-                        </div> 
-                        <div> 
-                            <p class="text-xs uppercase tracking-widest text-gray-500" > Currently focused on </p> 
-                            <h3 class="mt-1 text-lg font-bold text-white"> Full-Stack Development </h3> 
-                            <p class="mt-1 text-xs text-gray-400"> Building and improving practical web applications. </p> 
-                        </div> 
-                    </div> 
-                </BentoCard>  -->
-                <!-- ===================================================== CARD 4 — TECHNOLOGY STACK ===================================================== --> 
+                </BentoCard>
                 <BentoCard :width="2" :height="1"> 
                     <div class="flex h-full flex-col justify-center"> 
                         <p class="text-sm font-bold uppercase tracking-widest text-gray-500" > Tech I've worked with </p> 
@@ -137,18 +113,12 @@ onUnmounted(() => {
                             </div>
 
                             <div class="mt-auto pt-6 flex flex-wrap gap-3">
-                                <a
-                                    href="#projects"
-                                    class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
-                                    
-                                >
+                                <a href="#projects" class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10">
                                     <span>View Projects</span>
                                     <Icon icon="lucide:arrow-up-right" class="h-4 w-4"/>
                                 </a>
                 
-                                <a href="#contact"
-                                    class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white"
-                                >
+                                <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white">
                                     <span>Contact Me</span>
                                     <Icon icon="lucide:mail" class="h-4 w-4" />
                                 </a>
@@ -156,7 +126,6 @@ onUnmounted(() => {
                         </div>
                     </BentoCard>
                 
-                <!-- ===================================================== CARD 5 — FEATURED PROJECT ===================================================== --> 
                  <!-- <BentoCard :width="3" :height="2"> 
                     <div class="flex h-full flex-col justify-between"> 
                         <div> 
@@ -184,7 +153,7 @@ onUnmounted(() => {
                         </div> 
                     </div> 
                 </BentoCard>   -->
-                <!-- ===================================================== CARD 6 — OJT / EXPERIENCE ===================================================== --> 
+
                  <!-- <BentoCard :width="1" :height="2"> 
                     <div class="flex h-full flex-col justify-between"> 
                         <div> 
@@ -202,7 +171,7 @@ onUnmounted(() => {
                             Experience → 
                         </a> 
                     </div> 
-                </BentoCard>  -->
+                </BentoCard>   -->
             </BentoGrid>
         </div>
     </section>
