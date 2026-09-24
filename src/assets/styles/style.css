@@ -22,7 +22,7 @@ body {
 
 @layer components {
     .portfolio-section {
-        @apply min-h-[calc(100vh-56px)] scroll-mt-20 flex items-center justify-center overflow-hidden p-8;
+        @apply min-h-[calc(100vh-56px)] scroll-mt-20 grid place-items-center overflow-hidden p-8;
         box-sizing: border-box;
     }
 }

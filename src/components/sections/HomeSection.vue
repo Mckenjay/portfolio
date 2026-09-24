@@ -12,6 +12,13 @@ const isDeleting = ref(false)
 
 let timer: ReturnType<typeof setTimeout> | undefined
 
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
+
 function type() {
   const fullWord = words[wordIndex.value]
 
@@ -59,7 +66,7 @@ onUnmounted(() => {
                             I'm a <span class="text-orange-400"> Software Developer </span> 
                         </h1> 
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-lg" > 
-                            I build practical web applications using Laravel, Vue.js and modern web technologies. 
+                            I build practical software applications that turn ideas and real-world problems into useful, user-focused solutions.
                         </p>
                     </div> 
                 </BentoCard> 
@@ -69,8 +76,11 @@ onUnmounted(() => {
                             <span class="text-3xl"> <img class="bg-orange-400" :src="profile" alt="Profile" /> </span> 
                         </div> 
                         <h2 class="text-lg font-bold text-white"> Ted Bryan </h2> 
-                        <p class="mt-1 text-xs text-gray-400"> IT Graduate </p> 
-                        <p class="mt-3 text-xs text-gray-500"> Software Development </p> 
+                        <p class="mt-1 flex items-center gap-1.5 text-xs text-gray-400">
+                            <Icon icon="lucide:map-pin" class="h-3.5 w-3.5  text-gray-400" />
+                            Philippines
+                        </p>
+                        <p class="mt-3 text-xs text-gray-500"> Building practical solutions </p> 
                     </div> 
                 </BentoCard>
                 <BentoCard :width="2" :height="1"> 
@@ -113,12 +123,14 @@ onUnmounted(() => {
                             </div>
 
                             <div class="mt-auto pt-6 flex flex-wrap gap-3">
-                                <a href="#projects" class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10">
+                                <a href="#projects" class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
+                                    @click.prevent="scrollToSection('projects')">
                                     <span>View Projects</span>
                                     <Icon icon="lucide:arrow-up-right" class="h-4 w-4"/>
                                 </a>
                 
-                                <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white">
+                                <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white"
+                                    @click.prevent="scrollToSection('contact')">
                                     <span>Contact Me</span>
                                     <Icon icon="lucide:mail" class="h-4 w-4" />
                                 </a>
