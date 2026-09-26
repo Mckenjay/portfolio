@@ -66,7 +66,7 @@ import { Icon } from '@iconify/vue'
                         >
 
                             <a
-                                href="mailto:your@email.com"
+                                href="mailto:tedbryanrazonado12345@gmail.com"
                                 class="group inline-flex items-center
                                        gap-3 rounded-lg
                                        bg-orange-400 px-5 py-3
@@ -218,7 +218,7 @@ import { Icon } from '@iconify/vue'
                      BOTTOM MESSAGE
                      3 × 1
                 ========================================== -->
-                <BentoCard :width="3" :height="1">
+                <!-- <BentoCard :width="3" :height="1">
 
                     <div
                         class="flex h-full items-center
@@ -263,7 +263,7 @@ import { Icon } from '@iconify/vue'
 
                     </div>
 
-                </BentoCard>
+                </BentoCard> -->
 
 
                 <!-- =========================================
@@ -278,7 +278,7 @@ import { Icon } from '@iconify/vue'
                     >
 
                         <a
-                            href="https://github.com/yourusername"
+                            href="https://github.com/Mckenjay"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
@@ -293,7 +293,7 @@ import { Icon } from '@iconify/vue'
                         </a>
 
                         <a
-                            href="https://www.linkedin.com/in/yourusername"
+                            href="https://www.linkedin.com/in/teddev"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
@@ -308,7 +308,7 @@ import { Icon } from '@iconify/vue'
                         </a>
 
                         <a
-                            href="mailto:your@email.com"
+                            href="mailto:tedbryanrazonado12345@gmail.com"
                             aria-label="Email"
                             class="group"
                         >
