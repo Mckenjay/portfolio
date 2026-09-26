@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Portfolio from '@/views/Portfolio.vue';
 </script>
 
 <template>
-  <HelloWorld />
+    <Portfolio />
 </template>
+
+<style scoped></style>

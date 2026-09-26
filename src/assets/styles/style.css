@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+#app {
+  font-family: 'Space Mono';
+}
+
+/*html {
+    scroll-behavior: smooth;
+}*/
+
+body {
+    margin: 0;
+    /*min-width: 320px;*/
+    color: rgba(255, 255, 255, 0.85);
+    background:
+        /*radial-gradient(circle at 8% 8%, rgba(108, 92, 231, 0.4), transparent 32rem),
+        radial-gradient(circle at 92% 92%, rgba(0, 206, 201, 0.3), transparent 30rem),*/
+        #0F0F0F;
+    background-attachment: fixed;
+}
+
+@layer components {
+    .portfolio-section {
+        @apply min-h-[calc(100vh-56px)] scroll-mt-20 grid place-items-center overflow-hidden p-8;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 520px) { section { padding: 1rem; } }
+
+/*.portfolio-section {
+    min-height: 100vh;
+}*/
+
+/*.portfolio {
+    scroll-snap-type: y mandatory;
+}*/
+
+/*.portfolio-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+}*/
