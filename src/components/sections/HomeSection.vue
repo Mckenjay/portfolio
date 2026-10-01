@@ -92,7 +92,7 @@ onUnmounted(() => {
                             <span class="tech-badge" data-tech="CSS3"><Icon icon="fa6-brands:css3-alt" class="h-6 w-6" /></span>
                             <span class="tech-badge" data-tech="JavaScript"><Icon icon="bi:javascript" class="h-6 w-6" /></span>
                             <span class="tech-badge" data-tech="HTML5"><Icon icon="flowbite:html-solid" class="h-6 w-6" /></span>
-                            <span class="tech-badge" data-tech="Bootstrap"><Icon icon="fa6-brands:bootstrap" class="h-6 w-6" /></span>
+                            <!-- <span class="tech-badge" data-tech="Bootstrap"><Icon icon="fa6-brands:bootstrap" class="h-6 w-6" /></span> -->
                             <span class="tech-badge" data-tech="Tailwind"><Icon icon="fa7-brands:tailwind-css" class="h-6 w-6" /></span>
                             <span class="tech-badge tech-badge--category-end" data-tech="Flutter"><Icon icon="fa6-brands:flutter" class="h-6 w-6" /></span>
                             <span class="tech-badge tech-badge--category" data-tech="Laravel"><span class="tech-category-title">Backend</span><Icon icon="fa6-brands:laravel" class="h-6 w-6" /></span>

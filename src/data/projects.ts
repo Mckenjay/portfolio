@@ -13,16 +13,37 @@ export interface PortfolioProject {
 /** Add projects here. Leave optional URLs and image as null when unavailable. */
 export const projects: PortfolioProject[] = [
   {
-    id: 'pharma-clinic',
-    name: 'Pharma-Clinic Management System',
-    category: 'Capstone project',
+    id: 'pharmacy',
+    name: 'Pharmacy Management System',
+    category: 'Capstone Project',
     description:
-      'A system designed to manage pharmacy inventory, medicines, suppliers, orders, and clinic-related workflows.',
-    technologies: ['Laravel', 'MySQL', 'VB.NET'],
-    link: "https://leavedesk.lguhub.online",
-    repository: "Repository",
+      'A pharmacy inventory system developed for the client to manage medicines, suppliers, stock levels, orders, and other pharmacy operations.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
     image: null,
-    highlights: ['Inventory management', 'Supplier and order workflows', 'Clinic operations'],
+  },
+  {
+    id: 'clinic',
+    name: 'Clinic Appointment and Management System',
+    category: 'Capstone Project',
+    description:
+      'A clinic management system developed for the same client to handle patient information, appointment scheduling, and clinic records, supporting the client’s integrated healthcare operations.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'pos',
+    name: 'Pharmacy Point of Sale (POS) System',
+    category: 'Capstone Project',
+    description:
+      'A desktop-based POS module integrated with the pharmacy management system to support medicine sales, transaction processing, and pharmacy operations for the same client.',
+    technologies: ['VB.NET', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
   },
   {
     id: 'fibeco-billing-inquiry',
