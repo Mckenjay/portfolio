@@ -1,6 +1,7 @@
 import { ref } from 'vue';
 
 export type AccentName =
+  | 'emerald'
   | 'green'
   | 'lime'
   | 'red'
@@ -31,6 +32,12 @@ export interface Accent {
 }
 
 export const accents: Accent[] = [
+  {
+    name: 'emerald',
+    label: 'Emerald',
+    variable: 'var(--color-emerald-400)',
+    preview: 'bg-emerald-400'
+  },
   {
     name: 'green',
     label: 'Green',
@@ -140,22 +147,10 @@ export const accents: Accent[] = [
     preview: 'bg-gray-400',
   },
   {
-    name: 'zinc',
-    label: 'Zinc',
-    variable: 'var(--color-zinc-400)',
-    preview: 'bg-zinc-400',
-  },
-  {
     name: 'neutral',
     label: 'Neutral',
     variable: 'var(--color-neutral-400)',
     preview: 'bg-neutral-400',
-  },
-  {
-    name: 'stone',
-    label: 'Stone',
-    variable: 'var(--color-stone-400)',
-    preview: 'bg-stone-400',
   },
 ]
 

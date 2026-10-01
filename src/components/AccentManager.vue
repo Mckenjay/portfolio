@@ -60,6 +60,15 @@ const selectAccent = (accent: AccentName) => {
                         </span>
                     </button>
                 </div>
+
+                <button
+                    type="button"
+                    class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 px-3 py-2 text-xs text-white/50 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+                    @click="resetAccent"
+                >
+                    <Icon icon="lucide:rotate-ccw" class="h-3.5 w-3.5"/>
+                    Reset to Default
+                </button>
             </div>
         </Transition>
 
