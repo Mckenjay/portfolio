@@ -54,22 +54,22 @@ function moveProject(direction: -1 | 1) {
         <BentoCard :width="3" :tablet-width="2" class="gap-3! bg-[#141414]! p-4! sm:gap-4! sm:p-5!">
           <div class="flex flex-wrap items-start justify-between gap-x-5 gap-y-3">
             <div>
-              <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400 sm:text-xs">Selected work</p>
+              <!-- <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent sm:text-xs">Selected work</p> -->
               <h2 class="mt-1 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">
-                Projects <span class="text-orange-400">&amp; builds</span>
+                Projects <span class="text-accent">&amp; builds</span>
               </h2>
               <p class="mt-1.5 max-w-2xl text-xs leading-5 text-gray-400 sm:text-sm sm:leading-6">
                 Practical applications shaped around real workflows and useful details.
               </p>
             </div>
             <div class="flex shrink-0 items-center gap-3">
-              <span class="text-[10px] text-gray-500"><span class="text-orange-400">{{ String(filteredProjects.length).padStart(2, '0') }}</span> projects</span>
+              <span class="text-[10px] text-gray-500"><span class="text-accent">{{ String(filteredProjects.length).padStart(2, '0') }}</span> projects</span>
               <div class="flex items-center gap-1.5" aria-label="Project carousel controls">
-                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-orange-400/50 hover:text-orange-300 disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Previous project" @click="moveProject(-1)">
+                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-(--accent-color)/50 hover:text-accent disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Previous project" @click="moveProject(-1)">
                   <Icon icon="lucide:arrow-left" class="block h-4 w-4 shrink-0" />
                 </button>
                 <span class="min-w-12 text-center text-[10px] tabular-nums text-gray-500">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(filteredProjects.length).padStart(2, '0') }}</span>
-                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-orange-400/50 hover:text-orange-300 disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Next project" @click="moveProject(1)">
+                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-(--accent-color)/50 hover:text-accent disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Next project" @click="moveProject(1)">
                   <Icon icon="lucide:arrow-right" class="block h-4 w-4 shrink-0" />
                 </button>
               </div>
@@ -84,8 +84,8 @@ function moveProject(direction: -1 | 1) {
               type="button"
               class="inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-[10px] font-semibold transition sm:gap-2 sm:px-3 sm:text-xs"
               :class="selectedTechnology === technology
-                ? 'border-orange-400/50 bg-orange-400/10 text-orange-300'
-                : 'border-white/10 bg-white/3 text-gray-400 hover:border-orange-400/40 hover:text-orange-300'"
+                ? 'border-(--accent-color)/50 bg-(--accent-color)/10 text-accent'
+                : 'border-white/10 bg-white/3 text-gray-400 hover:border-(--accent-color)/40 hover:text-accent'"
               :aria-pressed="selectedTechnology === technology"
               @click="selectTechnology(technology)"
             >
@@ -99,14 +99,14 @@ function moveProject(direction: -1 | 1) {
             <BentoCard v-if="activeProject" :key="activeProject.id" :width="2" :tablet-width="2" :height="2" :tablet-height="2" :mobile-height="2" class="justify-between! gap-4! bg-[#141414]! p-4! sm:p-6!">
             <div class="flex h-full min-w-0 flex-col">
                 <div class="flex items-center gap-3">
-                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-orange-400/20 bg-orange-400/10 text-orange-400 sm:h-9 sm:w-9">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-(--accent-color)/20 bg-(--accent-color)/10 text-accent sm:h-9 sm:w-9">
                     <Icon icon="lucide:folder-kanban" class="block h-4 w-4 shrink-0" />
                 </span>
                 <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400 sm:text-xs">{{ activeProject.category }}</p>
                 </div>
     
                 <div class="my-auto py-3 sm:py-5">
-                <p class="mb-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-orange-400 sm:text-[10px]">Project {{ String(activeIndex + 1).padStart(2, '0') }}</p>
+                <p class="mb-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-accent sm:text-[10px]">Project {{ String(activeIndex + 1).padStart(2, '0') }}</p>
                 <h3 class="max-w-2xl text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl md:text-3xl">
                     {{ activeProject.name }}
                 </h3>
@@ -115,7 +115,7 @@ function moveProject(direction: -1 | 1) {
                 </p>
                 <ul v-if="activeProject.highlights?.length" class="mt-3 hidden flex-wrap gap-1.5 lg:flex" aria-label="Project highlights">
                     <li v-for="highlight in activeProject.highlights" :key="highlight" class="inline-flex items-center gap-1 rounded-md border border-white/10 bg-white/3 px-2 py-1 text-[10px] text-gray-300">
-                    <Icon icon="lucide:check" class="h-3 w-3 text-orange-400" />{{ highlight }}
+                    <Icon icon="lucide:check" class="h-3 w-3 text-accent" />{{ highlight }}
                     </li>
                 </ul>
                 </div>
@@ -124,13 +124,13 @@ function moveProject(direction: -1 | 1) {
                 <div>
                     <p class="mb-1.5 text-[9px] font-bold uppercase tracking-widest text-gray-500">Built with</p>
                     <ul class="flex flex-wrap gap-1.5" :aria-label="`${activeProject.name} technologies`">
-                    <li v-for="technology in activeProject.technologies" :key="technology" class="inline-flex items-center gap-1.5 rounded-md border border-orange-400/20 bg-orange-400/5 px-2 py-1 text-[10px] text-orange-300 sm:px-2.5 sm:text-xs">
+                    <li v-for="technology in activeProject.technologies" :key="technology" class="inline-flex items-center gap-1.5 rounded-md border border-(--accent-color)/20 bg-(--accent-color)/5 px-2 py-1 text-[10px] text-accent sm:px-2.5 sm:text-xs">
                         <Icon :icon="technologyIcons[technology] || 'lucide:code-2'" class="h-3 w-3 sm:h-3.5 sm:w-3.5" />{{ technology }}
                     </li>
                     </ul>
                 </div>
                 <div class="flex gap-2">
-                    <a v-if="activeProject.link" :href="activeProject.link" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-lg bg-orange-400 px-2.5 py-2 text-[10px] font-bold text-black transition hover:bg-orange-300 sm:px-3 sm:text-xs">
+                    <a v-if="activeProject.link" :href="activeProject.link" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-lg bg-accent px-2.5 py-2 text-[10px] font-bold text-black transition hover:bg-accent sm:px-3 sm:text-xs">
                     View project <Icon icon="lucide:arrow-up-right" class="h-3.5 w-3.5" />
                     </a>
                     <a v-if="activeProject.repository" :href="activeProject.repository" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-white/10 px-2.5 py-2 text-[10px] font-semibold text-gray-300 transition hover:border-white/30 hover:text-white sm:px-3 sm:text-xs">
@@ -148,8 +148,8 @@ function moveProject(direction: -1 | 1) {
                 <div v-if="activeProject.image" class="relative h-full w-full overflow-hidden">
                 <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="absolute! inset-0! h-full w-full object-cover" />
                 </div>
-                <div v-else class="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-orange-400/10 via-white/2 to-transparent p-4 text-center">
-                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-orange-300/20 bg-black/20 text-orange-400 shadow-[0_0_60px_rgba(251,146,60,0.08)]">
+                <div v-else class="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-(--accent-color)/10 via-white/2 to-transparent p-4 text-center">
+                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-(--accent-color)/20 bg-black/20 text-accent shadow-[0_0_60px_rgba(251,146,60,0.08)]">
                     <Icon :icon="activeProject.id === 'pharma-clinic' ? 'lucide:heart-pulse' : 'lucide:receipt-text'" class="block h-8 w-8 shrink-0" />
                 </span>
                 <p class="mt-4 text-[10px] font-semibold text-gray-300">{{ activeProject.name }}</p>

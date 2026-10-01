@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="codeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18151D"/>
+      <stop offset="100%" stop-color="#0A0A0E"/>
+    </linearGradient>
+
+    <!-- Subtle Orange Glow Rim -->
+    <linearGradient id="codeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8904" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#FF8904" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- Signature Orange Slash Gradient -->
+    <linearGradient id="slashGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="50%" stop-color="#FF8904"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+
+    <!-- Soft Ambient Glow behind Slash -->
+    <radialGradient id="slashGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF8904" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF8904" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Rounded Squircle Badge for Universal Tab Contrast -->
+  <rect width="64" height="64" rx="16" fill="url(#codeBg)"/>
+  <rect width="61.6" height="61.6" x="1.2" y="1.2" rx="14.8" fill="none" stroke="url(#codeBorder)" stroke-width="1.2"/>
+
+  <!-- Soft Ambient Glow behind Slash -->
+  <circle cx="32" cy="32" r="16" fill="url(#slashGlow)"/>
+
+  <!-- Left Bracket < in Crisp Silver/White -->
+  <path d="M 22 21 L 13 32 L 22 43"
+        stroke="#EDEDED"
+        stroke-width="4.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Center Slash / in Signature Orange -->
+  <line x1="37" y1="17" x2="27" y2="47"
+        stroke="url(#slashGrad)"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- Right Bracket > in Crisp Silver/White -->
+  <path d="M 42 21 L 51 32 L 42 43"
+        stroke="#EDEDED"
+        stroke-width="4.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

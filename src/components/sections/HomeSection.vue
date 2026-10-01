@@ -60,10 +60,10 @@ onUnmounted(() => {
                     <div class="flex h-full flex-col justify-center"> 
                         <p class="mb-2 text-2xl font-bold text-white" > 
                             {{ displayedWord }} 
-                            <span class="typing-cursor text-orange-400" aria-hidden="true" >|</span> 
+                            <span class="typing-cursor text-accent" aria-hidden="true" >|</span> 
                         </p> 
                         <h1 class="text-4xl font-bold tracking-tight text-white md:text-5xl" > 
-                            I'm a <span class="text-orange-400"> Software Developer </span> 
+                            I'm a <span class="text-accent"> Software Developer </span> 
                         </h1> 
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-lg" > 
                             I build practical software applications that turn ideas and real-world problems into useful, user-focused solutions.
@@ -73,7 +73,7 @@ onUnmounted(() => {
                 <BentoCard :width="1" :height="2"> 
                     <div class="flex h-full flex-col items-center justify-center text-center"> 
                         <div class="mb-4 flex h-26 w-26 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5" > 
-                            <span class="text-3xl"> <img class="bg-orange-400" :src="profile" alt="Profile" /> </span> 
+                            <span class="text-3xl"> <img class="bg-accent" :src="profile" alt="Profile" /> </span> 
                         </div> 
                         <h2 class="text-lg font-bold text-white"> Ted Bryan </h2> 
                         <p class="mt-1 flex items-center gap-1.5 text-xs text-gray-400">
@@ -129,7 +129,7 @@ onUnmounted(() => {
                                     <Icon icon="lucide:arrow-up-right" class="h-4 w-4"/>
                                 </a>
                 
-                                <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-orange-400 px-4 py-2.5 text-sm font-bold text-orange-400 transition-all duration-300 hover:-translate-y-0.5  hover:bg-orange-400 hover:text-white"
+                                <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-accent px-4 py-2.5 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-0.5  hover:bg-accent hover:text-white"
                                     @click.prevent="scrollToSection('contact')">
                                     <span>Contact Me</span>
                                     <Icon icon="lucide:mail" class="h-4 w-4" />
@@ -143,11 +143,11 @@ onUnmounted(() => {
                         <div> 
                             <div class="flex items-center justify-between"> 
                                 <p class="text-xs uppercase tracking-widest text-gray-500" > Featured Project </p> 
-                                <span class="rounded-full border border-orange-400/20 bg-orange-400/10 px-2 py-1 text-xs text-orange-400" > Capstone </span> 
+                                <span class="rounded-full border border-(--accent-color)/20 bg-(--accent-color)/10 px-2 py-1 text-xs text-accent" > Capstone </span> 
                             </div> 
                             <h2 class="mt-3 text-2xl font-bold text-white" > 
                                 Pharma-Clinic 
-                                <span class="text-orange-400"> Management System </span> 
+                                <span class="text-accent"> Management System </span> 
                             </h2> 
                             <p class="mt-3 max-w-xl text-sm leading-relaxed text-gray-400" > 
                                 A system designed to manage pharmacy inventory, medicines, suppliers, orders and clinic-related workflows. 
@@ -159,7 +159,7 @@ onUnmounted(() => {
                                 <span class="tech-badge"> MySQL </span> 
                                 <span class="tech-badge"> VB.NET </span> 
                             </div> 
-                            <a href="#projects" class="text-sm font-semibold text-orange-400 no-underline transition hover:text-orange-300" > 
+                            <a href="#projects" class="text-sm font-semibold text-accent no-underline transition hover:text-accent" > 
                                 View → 
                             </a> 
                         </div> 
@@ -171,7 +171,7 @@ onUnmounted(() => {
                         <div> 
                             <p class="text-xs uppercase tracking-widest text-gray-500" > Experience </p> 
                             <div class="mt-4 h-10 w-10 rounded-lg bg-white/5 p-2 text-center" > 
-                                <span class="text-sm text-orange-400"> MIS </span> 
+                                <span class="text-sm text-accent"> MIS </span> 
                             </div> 
                             <h3 class="mt-4 text-lg font-bold text-white" > FIBECO </h3> 
                             <p class="mt-1 text-xs text-gray-500"> MIS Section </p> 
@@ -179,7 +179,7 @@ onUnmounted(() => {
                                 Worked on a client billing inquiry web application using Laravel and Vue.js. 
                             </p> 
                         </div> 
-                        <a href="#experience" class="text-sm font-semibold text-orange-400 no-underline transition hover:text-orange-300" > 
+                        <a href="#experience" class="text-sm font-semibold text-accent no-underline transition hover:text-accent" > 
                             Experience → 
                         </a> 
                     </div> 
@@ -210,9 +210,9 @@ onUnmounted(() => {
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
 } 
 .tech-badge:hover { 
-    border-color: rgba(251, 146, 60, 0.3); 
-    background: rgba(251, 146, 60, 0.08); 
-    color: #ff8904;
+    border-color: rgb(var(--accent-color) / 0.3); 
+    background: rgb(var(--accent-color) / 0.08); 
+    color: var(--accent-color);
     /*color: #fb923c;*/
 } 
 
@@ -252,7 +252,7 @@ onUnmounted(() => {
     position: absolute;
     top: -1.05rem;
     left: 0;
-    color: #ff8904;
+    color: var(--accent-color);
     /*color: white;*/
     font-size: 0.7rem;
     font-weight: 700;
