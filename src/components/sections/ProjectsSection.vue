@@ -146,14 +146,14 @@ function moveProject(direction: -1 | 1) {
          <Transition :name="slideDirection > 0 ? 'project-next' : 'project-prev'" mode="out-in">
             <BentoCard v-if="activeProject" :width="1" :tablet-width="2" :height="2" :tablet-height="2" class="project-preview-card overflow-hidden! bg-[#151515]! p-0!">
                 <div v-if="activeProject.image" class="relative h-full w-full overflow-hidden">
-                <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="absolute! inset-0! h-full w-full object-cover" />
+                    <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="absolute! inset-0! h-full w-full object-cover" />
                 </div>
                 <div v-else class="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-(--accent-color)/10 via-white/2 to-transparent p-4 text-center">
-                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-(--accent-color)/20 bg-black/20 text-accent shadow-[0_0_60px_rgba(251,146,60,0.08)]">
-                    <Icon :icon="activeProject.id === 'pharma-clinic' ? 'lucide:heart-pulse' : 'lucide:receipt-text'" class="block h-8 w-8 shrink-0" />
-                </span>
-                <p class="mt-4 text-[10px] font-semibold text-gray-300">{{ activeProject.name }}</p>
-                <p class="mt-1 text-[9px] uppercase tracking-widest text-gray-500">No preview image</p>
+                    <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-(--accent-color)/20 bg-black/20 text-accent shadow-[0_0_60px_rgba(251,146,60,0.08)]">
+                        <Icon :icon="activeProject.id === 'pharma-clinic' ? 'lucide:heart-pulse' : 'lucide:receipt-text'" class="block h-8 w-8 shrink-0" />
+                    </span>
+                    <p class="mt-4 text-[10px] font-semibold text-gray-300">{{ activeProject.name }}</p>
+                    <p class="mt-1 text-[9px] uppercase tracking-widest text-gray-500">No preview image</p>
                 </div>
             </BentoCard>
         </Transition> 

@@ -51,7 +51,29 @@ export const projects: PortfolioProject[] = [
     category: 'FIBECO · MIS',
     description:
       'A client billing inquiry web application built with Laravel and Vue.js during my time with FIBECO’s MIS team.',
-    technologies: ['Laravel', 'Vue.js'],
+    technologies: ['Laravel', 'PHP', 'Vue.js', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'emotorela',
+    name: 'LGU Permit Application and Tracking System',
+    category: 'Project',
+    description:
+      ' Laravel web app for managing local government permit applications. It tracks applicants and their documents through reviews by offices such as BPLD, OBO, MHO, and MENRO, with features for workflows, checklists, and application paperwork.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'leave-system',
+    name: 'Employee Leave Request System',
+    category: 'Project',
+    description:
+      ' A laravel web application for filing and managing employee leave requests.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
     image: null,
