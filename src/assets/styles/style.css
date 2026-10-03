@@ -5,9 +5,39 @@
   font-family: 'Space Mono';
 }
 
-/*html {
-    scroll-behavior: smooth;
-}*/
+:root {
+    --accent-color: var(--color-orange-400);
+}
+
+@utility text-accent {
+    color: var(--accent-color);
+}
+
+@utility bg-accent {
+    background-color: var(--accent-color);
+}
+
+@utility border-accent {
+    border-color: var(--accent-color);
+}
+
+@utility shadow-accent-20 {
+  box-shadow: 0 8px 30px
+    color-mix(
+      in srgb,
+      var(--accent-color) 20%,
+      transparent
+    );
+}
+
+@utility shadow-accent-80 {
+  box-shadow: 0 0 8px
+    color-mix(
+      in srgb,
+      var(--accent-color) 80%,
+      transparent
+    );
+}
 
 body {
     margin: 0;

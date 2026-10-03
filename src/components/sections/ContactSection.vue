@@ -8,48 +8,23 @@ import { Icon } from '@iconify/vue'
     <section id="contact" class="portfolio-section">
         <div class="w-full max-w-6xl">
 
-            <BentoGrid
-                :columns="4"
-                :tablet-columns="2"
-                :row-height="72"
-                gap="0.75rem"
-            >
-
-                <!-- =========================================
-                     MAIN CONTACT CARD
-                     3 × 3
-                ========================================== -->
+            <BentoGrid :columns="4" :tablet-columns="2" :row-height="72" gap="0.75rem">
                 <BentoCard :width="3" :height="4">
-
                     <div class="relative flex h-full flex-col">
-
-
-                        <!-- Heading -->
                         <div class="relative z-10">
 
-                            <p
-                                class="text-[10px] font-bold uppercase
-                                       tracking-[0.3em] text-orange-400"
-                            >
+                            <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-accent">
                                 Get In Touch
                             </p>
 
-                            <h2
-                                class="mt-4 max-w-2xl text-3xl
-                                       font-bold leading-tight
-                                       tracking-tight text-white
-                                       md:text-4xl"
-                            >
+                            <h2 class="mt-4 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl">
                                 Let's build something
-                                <span class="text-orange-400">
+                                <span class="text-accent">
                                     meaningful.
                                 </span>
                             </h2>
 
-                            <p
-                                class="mt-4 max-w-xl text-sm
-                                       leading-6 text-gray-400"
-                            >
+                            <p class="mt-4 max-w-xl text-sm leading-6 text-gray-400">
                                 I'm open to software development
                                 opportunities, freelance projects,
                                 and collaborations.
@@ -69,12 +44,12 @@ import { Icon } from '@iconify/vue'
                                 href="mailto:tedbryanrazonado12345@gmail.com"
                                 class="group inline-flex items-center
                                        gap-3 rounded-lg
-                                       bg-orange-400 px-5 py-3
+                                       bg-accent px-5 py-3
                                        text-sm font-bold text-black
                                        transition-all duration-300
                                        hover:-translate-y-1
-                                       hover:bg-orange-300
-                                       hover:shadow-[0_8px_30px_rgba(251,146,60,0.2)]"
+                                       <!-- hover:bg-accent -->
+                                       hover:shadow-accent-20"
                             >
                                 <span>Send me an email</span>
 
@@ -114,32 +89,24 @@ import { Icon } from '@iconify/vue'
 
                 </BentoCard>
 
-
-                <!-- =========================================
-                     AVAILABILITY CARD
-                     1 × 3
-                ========================================== -->
                 <BentoCard :width="1" :height="3">
-
                     <div class="flex h-full flex-col">
-
-                        <!-- status -->
                         <div class="flex justify-end">
 
                             <span
                                 class="flex items-center gap-2
                                        rounded-full border
-                                       border-orange-400/20
-                                       bg-orange-400/5
+                                       border-(--accent-color)/20
+                                       bg-(--accent-color)/5
                                        px-2.5 py-1.5
                                        text-[9px] font-bold
                                        uppercase tracking-wider
-                                       text-orange-400"
+                                       text-accent"
                             >
                                 <span
                                     class="h-1.5 w-1.5 rounded-full
-                                           bg-orange-400
-                                           shadow-[0_0_8px_rgba(251,146,60,0.8)]"
+                                           bg-accent
+                                           shadow-accent-80"
                                 ></span>
 
                                 Available
@@ -158,7 +125,7 @@ import { Icon } from '@iconify/vue'
                             <div
                                 class="flex h-14 w-14 items-center
                                        justify-center rounded-2xl
-                                       bg-orange-400"
+                                       bg-accent"
                             >
                                 <Icon
                                     icon="lucide:briefcase-business"
@@ -230,7 +197,7 @@ import { Icon } from '@iconify/vue'
                             <p
                                 class="text-[9px] uppercase
                                        tracking-[0.25em]
-                                       text-orange-400"
+                                       text-accent"
                             >
                                 Start a conversation
                             </p>
@@ -250,7 +217,7 @@ import { Icon } from '@iconify/vue'
                             class="hidden shrink-0 items-center
                                    gap-2 text-xs font-bold
                                    text-white transition-colors
-                                   hover:text-orange-400
+                                   hover:text-accent
                                    sm:flex"
                         >
                             Let's talk
@@ -286,7 +253,7 @@ import { Icon } from '@iconify/vue'
                         >
                             <Icon
                                 icon="simple-icons:github"
-                                class="h-4 w-4 text-gray-500
+                                class="h-6 w-6 text-gray-500
                                        transition-colors
                                        group-hover:text-white"
                             />
@@ -301,25 +268,11 @@ import { Icon } from '@iconify/vue'
                         >
                             <Icon
                                 icon="simple-icons:linkedin"
-                                class="h-4 w-4 text-gray-500
+                                class="h-6 w-6 text-gray-500
                                        transition-colors
-                                       group-hover:text-orange-400"
+                                       group-hover:text-white"
                             />
                         </a>
-
-                        <a
-                            href="mailto:tedbryanrazonado12345@gmail.com"
-                            aria-label="Email"
-                            class="group"
-                        >
-                            <Icon
-                                icon="lucide:mail"
-                                class="h-4 w-4 text-gray-500
-                                       transition-colors
-                                       group-hover:text-orange-400"
-                            />
-                        </a>
-
                     </div>
 
                 </BentoCard>

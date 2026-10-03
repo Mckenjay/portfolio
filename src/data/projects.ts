@@ -13,16 +13,37 @@ export interface PortfolioProject {
 /** Add projects here. Leave optional URLs and image as null when unavailable. */
 export const projects: PortfolioProject[] = [
   {
-    id: 'pharma-clinic',
-    name: 'Pharma-Clinic Management System',
-    category: 'Capstone project',
+    id: 'pharmacy',
+    name: 'Pharmacy Management System',
+    category: 'Capstone Project',
     description:
-      'A system designed to manage pharmacy inventory, medicines, suppliers, orders, and clinic-related workflows.',
-    technologies: ['Laravel', 'MySQL', 'VB.NET'],
-    link: "https://leavedesk.lguhub.online",
-    repository: "Repository",
+      'A pharmacy inventory system developed for the client to manage medicines, suppliers, stock levels, orders, and other pharmacy operations.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
     image: null,
-    highlights: ['Inventory management', 'Supplier and order workflows', 'Clinic operations'],
+  },
+  {
+    id: 'clinic',
+    name: 'Clinic Appointment and Management System',
+    category: 'Capstone Project',
+    description:
+      'A clinic management system developed for the same client to handle patient information, appointment scheduling, and clinic records, supporting the client’s integrated healthcare operations.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'pos',
+    name: 'Pharmacy Point of Sale (POS) System',
+    category: 'Capstone Project',
+    description:
+      'A desktop-based POS module integrated with the pharmacy management system to support medicine sales, transaction processing, and pharmacy operations for the same client.',
+    technologies: ['VB.NET', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
   },
   {
     id: 'fibeco-billing-inquiry',
@@ -30,7 +51,29 @@ export const projects: PortfolioProject[] = [
     category: 'FIBECO · MIS',
     description:
       'A client billing inquiry web application built with Laravel and Vue.js during my time with FIBECO’s MIS team.',
-    technologies: ['Laravel', 'Vue.js'],
+    technologies: ['Laravel', 'PHP', 'Vue.js', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'emotorela',
+    name: 'LGU Permit Application and Tracking System',
+    category: 'Project',
+    description:
+      ' Laravel web app for managing local government permit applications. It tracks applicants and their documents through reviews by offices such as BPLD, OBO, MHO, and MENRO, with features for workflows, checklists, and application paperwork.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'leave-system',
+    name: 'Employee Leave Request System',
+    category: 'Project',
+    description:
+      ' A laravel web application for filing and managing employee leave requests.',
+    technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
     image: null,

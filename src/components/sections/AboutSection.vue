@@ -11,12 +11,12 @@ import { Icon } from '@iconify/vue'
                 <BentoCard :width="3" :height="3">
                     <div class="mx-auto flex h-full w-full max-w-4xl flex-col justify-center gap-6">
                         <header class="flex items-center gap-4">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-400">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent">
                                 <Icon icon="lucide:user" class="h-6 w-6 text-black" />
                             </div>
 
                             <div>
-                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-orange-400">
+                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
                                     About Me
                                 </p>
                                 <h2 class="mt-1 text-2xl font-bold leading-tight text-white md:text-3xl">
@@ -40,20 +40,20 @@ import { Icon } from '@iconify/vue'
                         </div>
 
                         <div class="flex flex-col gap-2">
-                            <p class="text-[10px] uppercase tracking-widest text-orange-400">
+                            <p class="text-[10px] uppercase tracking-widest text-accent">
                                 Core Focus
                             </p>
                             <ul class="flex flex-wrap gap-2.5" aria-label="Areas of focus">
-                                <li class="rounded-md border border-orange-400/20 bg-orange-400/10 px-3 py-2 text-xs leading-4 text-orange-400">
+                                <li class="rounded-md border border-(--accent-color)/20 bg-(--accent-color)/10 px-3 py-2 text-xs leading-4 text-accent">
                                     Software Development
                                 </li>
-                                <li class="rounded-md border border-orange-400/20 bg-orange-400/10 px-3 py-2 text-xs leading-4 text-orange-400">
+                                <li class="rounded-md border border-(--accent-color)/20 bg-(--accent-color)/10 px-3 py-2 text-xs leading-4 text-accent">
                                     Web Development
                                 </li>
-                                <li class="rounded-md border border-orange-400/20 bg-orange-400/10 px-3 py-2 text-xs leading-4 text-orange-400">
+                                <li class="rounded-md border border-(--accent-color)/20 bg-(--accent-color)/10 px-3 py-2 text-xs leading-4 text-accent">
                                     Database Systems
                                 </li>
-                                <li class="rounded-md border border-orange-400/20 bg-orange-400/10 px-3 py-2 text-xs leading-4 text-orange-400">
+                                <li class="rounded-md border border-(--accent-color)/20 bg-(--accent-color)/10 px-3 py-2 text-xs leading-4 text-accent">
                                     Problem Solving
                                 </li>
                             </ul>
