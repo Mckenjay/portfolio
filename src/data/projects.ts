@@ -1,3 +1,10 @@
+import pharmacy from '@/assets/images/projects/pharmacy.png'
+import pos from '@/assets/images/projects/pos.png'
+import clinic from '@/assets/images/projects/clinic.png'
+import lgu from '@/assets/images/projects/lgu.png'
+import leave from '@/assets/images/projects/leave.png'
+
+
 export interface PortfolioProject {
   id: string
   name: string
@@ -21,7 +28,7 @@ export const projects: PortfolioProject[] = [
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
-    image: null,
+    image: pharmacy,
   },
   {
     id: 'clinic',
@@ -32,7 +39,7 @@ export const projects: PortfolioProject[] = [
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
-    image: null,
+    image: clinic,
   },
   {
     id: 'pos',
@@ -43,7 +50,7 @@ export const projects: PortfolioProject[] = [
     technologies: ['VB.NET', 'MySQL'],
     link: null,
     repository: null,
-    image: null,
+    image: pos,
   },
   {
     id: 'fibeco-billing-inquiry',
@@ -58,14 +65,14 @@ export const projects: PortfolioProject[] = [
   },
   {
     id: 'emotorela',
-    name: 'LGU Permit Application and Tracking System',
+    name: 'LGU Motorela Franchising and Tracking System',
     category: 'Project',
     description:
-      ' Laravel web app for managing local government permit applications. It tracks applicants and their documents through reviews by offices such as BPLD, OBO, MHO, and MENRO, with features for workflows, checklists, and application paperwork.',
+      ' Laravel web app for managing local government franchising applications. It tracks applicants and their documents through reviews by different offices, with features for workflows, checklists, and application paperwork.',
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
-    image: null,
+    image: lgu,
   },
   {
     id: 'leave-system',
@@ -76,6 +83,6 @@ export const projects: PortfolioProject[] = [
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
-    image: null,
+    image: leave,
   },
 ]
