@@ -3,7 +3,7 @@ import pos from '@/assets/images/projects/pos.png'
 import clinic from '@/assets/images/projects/clinic.png'
 import lgu from '@/assets/images/projects/lgu.png'
 import leave from '@/assets/images/projects/leave.png'
-
+import portfolio from '@/assets/images/projects/portfolio.png'
 
 export interface PortfolioProject {
   id: string
@@ -106,5 +106,16 @@ export const projects: PortfolioProject[] = [
     link: null,
     repository: null,
     image: null,
+  },
+  {
+    id: 'portfolio-website',
+    name: 'Personal Portfolio Website',
+    category: 'Project',
+    description:
+      'A responsive modern personal portfolio website built to showcase software development projects, technical skills, and professional experience.',
+    technologies: ['Vue.js', 'TypeScript', 'Tailwind CSS'],
+    link: null,
+    repository: 'https://github.com/Mckenjay/portfolio',
+    image: portfolio,
   },
 ]

@@ -29,7 +29,9 @@ const technologyIcons: Record<string, string> = {
   'VB.NET': 'fluent:code-vb-16-regular',
   Flutter: 'fluent:code-vb-16-regular',
   Wordpress: 'fa6-brands:wordpress',
-  Elementor: 'fa6-brands:elementor'
+  Elementor: 'fa6-brands:elementor',
+  TypeScript: 'bi:typescript',
+  'Tailwind CSS': 'fa7-brands:tailwind-css'
 }
 
 const technologies = computed(() => [
