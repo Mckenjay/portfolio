@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { Icon } from '@iconify/vue'
 import BentoCard from '@/components/BentoCard.vue'
 import BentoGrid from '@/components/BentoGrid.vue'
@@ -8,6 +8,18 @@ import { projects } from '@/data/projects'
 const selectedTechnology = ref('All')
 const activeIndex = ref(0)
 const slideDirection = ref<1 | -1>(1)
+const maximizedImage = ref<string | null>(null)
+
+function closeMaximizedImage() {
+  maximizedImage.value = null
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') closeMaximizedImage()
+}
+
+onMounted(() => window.addEventListener('keydown', handleKeydown))
+onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
 const technologyIcons: Record<string, string> = {
   All: 'lucide:layers-3',
@@ -17,7 +29,9 @@ const technologyIcons: Record<string, string> = {
   'VB.NET': 'fluent:code-vb-16-regular',
   Flutter: 'fluent:code-vb-16-regular',
   Wordpress: 'fa6-brands:wordpress',
-  Elementor: 'fa6-brands:elementor'
+  Elementor: 'fa6-brands:elementor',
+  TypeScript: 'bi:typescript',
+  'Tailwind CSS': 'fa7-brands:tailwind-css'
 }
 
 const technologies = computed(() => [
@@ -145,12 +159,28 @@ function moveProject(direction: -1 | 1) {
 
          <Transition :name="slideDirection > 0 ? 'project-next' : 'project-prev'" mode="out-in">
             <BentoCard v-if="activeProject" :width="1" :tablet-width="2" :height="2" :tablet-height="2" class="project-preview-card overflow-hidden! bg-[#151515]! p-0!">
-                <div v-if="activeProject.image" class="relative h-full w-full overflow-hidden">
-                    <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="absolute! inset-0! h-full w-full object-cover" />
+                <div
+                  v-if="activeProject.image"
+                  class="group relative h-full w-full cursor-zoom-in overflow-hidden"
+                  role="button"
+                  tabindex="0"
+                  :aria-label="`View ${activeProject.name} image full size`"
+                  @click="maximizedImage = activeProject.image"
+                  @keydown.enter.space.prevent="maximizedImage = activeProject.image"
+                >
+                    <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="pointer-events-none absolute! inset-0! h-full w-full object-cover" />
+                    <button
+                      type="button"
+                      class="absolute left-1/2 top-1/2 z-10 inline-flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/15 bg-black/70 text-white opacity-0 shadow-lg transition hover:bg-black focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-(--accent-color) group-hover:opacity-100"
+                      :aria-label="`Maximize ${activeProject.name} image`"
+                      @click.stop="maximizedImage = activeProject.image"
+                    >
+                      <Icon icon="fluent:full-screen-maximize-16-regular" class="h-5 w-5" />
+                    </button>
                 </div>
                 <div v-else class="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-(--accent-color)/10 via-white/2 to-transparent p-4 text-center">
                     <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-(--accent-color)/20 bg-black/20 text-accent shadow-[0_0_60px_rgba(251,146,60,0.08)]">
-                        <Icon :icon="activeProject.id === 'pharma-clinic' ? 'lucide:heart-pulse' : 'lucide:receipt-text'" class="block h-8 w-8 shrink-0" />
+                        <Icon icon="akar-icons:image" class="block h-8 w-8 shrink-0" />
                     </span>
                     <p class="mt-4 text-[10px] font-semibold text-gray-300">{{ activeProject.name }}</p>
                     <p class="mt-1 text-[9px] uppercase tracking-widest text-gray-500">No preview image</p>
@@ -159,6 +189,32 @@ function moveProject(direction: -1 | 1) {
         </Transition> 
       </BentoGrid>
     </div>
+
+    <Teleport to="body">
+      <div
+        v-if="maximizedImage"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-8"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Maximized project image"
+        @click.self="closeMaximizedImage"
+      >
+        <button
+          type="button"
+          class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-(--accent-color)"
+          aria-label="Close maximized image"
+          @click="closeMaximizedImage"
+        >
+          <Icon icon="lucide:x" class="h-5 w-5" />
+        </button>
+        <img
+          :src="maximizedImage"
+          alt="Maximized project preview"
+          class="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+          @click.stop
+        />
+      </div>
+    </Teleport>
   </section>
 </template>
 
