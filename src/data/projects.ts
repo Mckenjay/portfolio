@@ -85,4 +85,26 @@ export const projects: PortfolioProject[] = [
     repository: null,
     image: leave,
   },
+  {
+    id: 'wordpress',
+    name: 'We Buy Junk Cars for Cash Website Clone',
+    category: 'Project',
+    description:
+    'A WordPress and Elementor site clone built to master custom layouts, responsive design, and page builder workflows.',
+    technologies: ['Wordpress', 'Elementor'],
+    link: null,
+    repository: null,
+    image: null,
+  },
+  {
+    id: 'ecommerce',
+    name: 'Practice Project for an E-commerce Website',
+    category: 'Project',
+    description:
+    'A practice e-commerce website built with WordPress and Elementor to explore online store functionality, product layouts, and design customization.',
+    technologies: ['Wordpress', 'Elementor'],
+    link: null,
+    repository: null,
+    image: null,
+  },
 ]
