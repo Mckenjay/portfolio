@@ -49,6 +49,6 @@ npm run preview
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live View
 
 Check out the live application here: [Live Website](https://mckenjay.github.io/portfolio)
