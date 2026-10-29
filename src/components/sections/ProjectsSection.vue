@@ -78,12 +78,14 @@ function moveProject(direction: -1 | 1) {
             </div>
             <div class="flex shrink-0 items-center gap-3">
               <span class="text-[10px] text-gray-500"><span class="text-accent">{{ String(filteredProjects.length).padStart(2, '0') }}</span> projects</span>
-              <div class="flex items-center gap-1.5" aria-label="Project carousel controls">
-                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-(--accent-color)/50 hover:text-accent disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Previous project" @click="moveProject(-1)">
+              <div class="flex items-center gap-2" aria-label="Project carousel controls">
+                <button type="button" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-(--accent-color)/40 bg-(--accent-color)/10 px-3 text-sm font-bold text-accent shadow-[0_0_20px_rgba(251,146,60,0.08)] transition hover:bg-(--accent-color)/20 focus:outline-none focus:ring-2 focus:ring-(--accent-color) disabled:opacity-35 sm:min-h-12 sm:px-4" :disabled="filteredProjects.length < 2" aria-label="Previous project" @click="moveProject(-1)">
                   <Icon icon="lucide:arrow-left" class="block h-4 w-4 shrink-0" />
+                  <span>Previous</span>
                 </button>
-                <span class="min-w-12 text-center text-[10px] tabular-nums text-gray-500">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(filteredProjects.length).padStart(2, '0') }}</span>
-                <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition hover:border-(--accent-color)/50 hover:text-accent disabled:opacity-35" :disabled="filteredProjects.length < 2" aria-label="Next project" @click="moveProject(1)">
+                <span class="min-w-12 text-center text-xs tabular-nums text-gray-400">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(filteredProjects.length).padStart(2, '0') }}</span>
+                <button type="button" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-(--accent-color)/40 bg-(--accent-color)/10 px-3 text-sm font-bold text-accent shadow-[0_0_20px_rgba(251,146,60,0.08)] transition hover:bg-(--accent-color)/20 focus:outline-none focus:ring-2 focus:ring-(--accent-color) disabled:opacity-35 sm:min-h-12 sm:px-4" :disabled="filteredProjects.length < 2" aria-label="Next project" @click="moveProject(1)">
+                  <span>Next</span>
                   <Icon icon="lucide:arrow-right" class="block h-4 w-4 shrink-0" />
                 </button>
               </div>
@@ -171,11 +173,12 @@ function moveProject(direction: -1 | 1) {
                     <img :src="activeProject.image" :alt="`${activeProject.name} preview`" class="pointer-events-none absolute! inset-0! h-full w-full object-cover" />
                     <button
                       type="button"
-                      class="absolute left-1/2 top-1/2 z-10 inline-flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/15 bg-black/70 text-white opacity-0 shadow-lg transition hover:bg-black focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-(--accent-color) group-hover:opacity-100"
+                      class="absolute left-1/2 top-1/2 z-10 inline-flex min-h-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 rounded-xl border border-white/30 bg-black/80 px-5 text-sm font-bold text-white shadow-xl transition hover:bg-black focus:outline-none focus:ring-2 focus:ring-(--accent-color)"
                       :aria-label="`Maximize ${activeProject.name} image`"
                       @click.stop="maximizedImage = activeProject.image"
                     >
                       <Icon icon="fluent:full-screen-maximize-16-regular" class="h-5 w-5" />
+                      <span>Preview</span>
                     </button>
                 </div>
                 <div v-else class="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-(--accent-color)/10 via-white/2 to-transparent p-4 text-center">
@@ -193,7 +196,7 @@ function moveProject(direction: -1 | 1) {
     <Teleport to="body">
       <div
         v-if="maximizedImage"
-        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-8"
+        class="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-8"
         role="dialog"
         aria-modal="true"
         aria-label="Maximized project image"
