@@ -159,8 +159,8 @@ function moveProject(direction: -1 | 1) {
             </BentoCard>
         </Transition> 
 
-         <Transition :name="slideDirection > 0 ? 'project-next' : 'project-prev'" mode="out-in">
-            <BentoCard v-if="activeProject" :width="1" :tablet-width="2" :height="2" :tablet-height="2" class="project-preview-card overflow-hidden! bg-[#151515]! p-0!">
+        <Transition :name="slideDirection > 0 ? 'project-next' : 'project-prev'" mode="out-in">
+            <BentoCard v-if="activeProject" :width="1" :tablet-width="2" :height="2" :tablet-height="3" :mobile-height="3" class="project-preview-card overflow-hidden! bg-[#151515]! p-0!">
                 <div
                   v-if="activeProject.image"
                   class="group relative h-full w-full cursor-zoom-in overflow-hidden"
@@ -222,12 +222,6 @@ function moveProject(direction: -1 | 1) {
 </template>
 
 <style scoped>
-@media (max-width: 900px) {
-  .project-preview-card {
-    display: none !important;
-  }
-}
-
 .project-next-enter-active,
 .project-next-leave-active,
 .project-prev-enter-active,

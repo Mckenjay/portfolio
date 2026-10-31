@@ -3,7 +3,10 @@ import pos from '@/assets/images/projects/pos.png'
 import clinic from '@/assets/images/projects/clinic.png'
 import lgu from '@/assets/images/projects/lgu.png'
 import leave from '@/assets/images/projects/leave.png'
+import ecommerce from '@/assets/images/projects/ecommerce.png'
+import copy from '@/assets/images/projects/copy.png'
 import portfolio from '@/assets/images/projects/portfolio.png'
+
 
 export interface PortfolioProject {
   id: string
@@ -57,7 +60,7 @@ export const projects: PortfolioProject[] = [
     name: 'Billing Inquiry Application',
     category: 'FIBECO · MIS',
     description:
-      'A client billing inquiry web application built with Laravel and Vue.js during my time with FIBECO’s MIS team.',
+      'A client billing inquiry web application built with Laravel and Vue.js during my internship in FIBECO  with the MIS team.',
     technologies: ['Laravel', 'PHP', 'Vue.js', 'MySQL'],
     link: null,
     repository: null,
@@ -94,7 +97,7 @@ export const projects: PortfolioProject[] = [
     technologies: ['Wordpress', 'Elementor'],
     link: null,
     repository: null,
-    image: null,
+    image: copy,
   },
   {
     id: 'ecommerce',
@@ -103,9 +106,9 @@ export const projects: PortfolioProject[] = [
     description:
     'A practice e-commerce website built with WordPress and Elementor to explore online store functionality, product layouts, and design customization.',
     technologies: ['Wordpress', 'Elementor'],
-    link: null,
+    link: 'https://veloforge.lguhub.online',
     repository: null,
-    image: null,
+    image: ecommerce,
   },
   {
     id: 'portfolio-website',
