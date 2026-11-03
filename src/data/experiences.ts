@@ -6,7 +6,7 @@ export interface Experiences {
   icon: string,
   description: string,
   highlights: null | string[],
-  technologies: null | string[]
+  technologies?: null | string[]
 }
 
 export const experiences: Experiences[] = [
@@ -22,7 +22,7 @@ export const experiences: Experiences[] = [
       'Migrated a WordPress website through Pantheon, a local development environment, and Hostinger.',
       'Worked with Terminus to retrieve website files, transferred files between environments, migrated the MySQL database, and configured the database connection on Hostinger.'
     ],
-    technologies: ['WordPress', 'Elementor', 'Pantheon', 'Terminus', 'Hostinger', 'MySQL']
+    technologies: ['WordPress', 'Elementor', 'MySQL']
   },
   {
     role: 'Freelance Web Developer',
