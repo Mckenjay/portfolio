@@ -42,7 +42,7 @@ import { experiences } from "@/data/experiences";
                     </div>
                 </BentoCard>
                 <article
-                    v-for="(item, index) in experiences"
+                    v-for="(item) in experiences"
                     :key="item.role"
                     class="col-span-3 sm:col-span-3"
                 >
