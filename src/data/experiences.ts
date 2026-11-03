@@ -18,7 +18,7 @@ export const experiences: Experiences[] = [
     icon: 'lucide:code-2',
     description: 'Continuing to strengthen web development skills through personal projects and independent learning, with a focus on WordPress development, website migration, and hosting workflows.',
     highlights: [
-      'Practiced WordPress website development and page customization using WordPress and Elementor.',
+      'Learned WordPress website development and page customization using WordPress and Elementor.',
       'Migrated a WordPress website through Pantheon, a local development environment, and Hostinger.',
       'Worked with Terminus to retrieve website files, transferred files between environments, migrated the MySQL database, and configured the database connection on Hostinger.'
     ],
