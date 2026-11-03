@@ -6,7 +6,7 @@ export interface Experiences {
   icon: string,
   description: string,
   highlights: null | string[],
-  technologies: string[]
+  technologies: null | string[]
 }
 
 export const experiences: Experiences[] = [
