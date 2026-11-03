@@ -16,7 +16,7 @@ export const experiences: Experiences[] = [
     period: 'August 2025 – Present',
     type: 'Freelance',
     icon: 'lucide:briefcase-business',
-    description: 'Developed a Laravel/MySQL web application for a stakeholder. Expanded into WordPress with Elementor customization and full site migrations across platforms.',
+    description: 'Developed a Laravel/MySQL web application for a client. Expanded into WordPress with Elementor customization and full site migrations across platforms.',
     highlights: [
       'Developed a Laravel/MySQL web application, handling system design, database architecture, and full-stack implementation.',
       'Migrated a WordPress site from Pantheon to Hostinger using Terminus for file retrieval and environment transfers.',
