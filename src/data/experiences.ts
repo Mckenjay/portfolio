@@ -11,32 +11,19 @@ export interface Experiences {
 
 export const experiences: Experiences[] = [
   {
-    role: 'Independent Projects & Professional Development',
-    organization: 'Independent',
-    period: 'June 2026 – Present',
-    type: 'Professional Development',
-    icon: 'lucide:code-2',
-    description: 'Continuing to strengthen web development skills through personal projects and independent learning, with a focus on WordPress development, website migration, and hosting workflows.',
-    highlights: [
-      'Learned WordPress website development and page customization using WordPress and Elementor.',
-      'Migrated a WordPress website through Pantheon, a local development environment, and Hostinger.',
-      'Worked with Terminus to retrieve website files, transferred files between environments, migrated the MySQL database, and configured the database connection on Hostinger.'
-    ],
-    technologies: ['WordPress', 'Elementor', 'MySQL']
-  },
-  {
     role: 'Freelance Web Developer',
-    organization: 'Project-Based Development',
-    period: 'August 2025 – May 2026',
+    organization: 'Self-employed',
+    period: 'August 2025 – Present',
     type: 'Freelance',
     icon: 'lucide:briefcase-business',
-    description: 'Developed a Laravel-based web application project for a stakeholder.',
+    description: 'Developed a Laravel/MySQL web application for a stakeholder. Expanded into WordPress with Elementor customization and full site migrations across platforms.',
     highlights: [
-      'Developed a Laravel-based web application based on project requirements.',
-      'Worked on application functionality, system design, and database integration.',
-      'Applied PHP, Laravel, and MySQL to build the application based on project requirements.'
+      'Developed a Laravel/MySQL web application, handling system design, database architecture, and full-stack implementation.',
+      'Migrated a WordPress site from Pantheon to Hostinger using Terminus for file retrieval and environment transfers.',
+      'Configured production database connections and customized site pages with Elementor.',
+      'Expanded stack from PHP/Laravel into WordPress ecosystem and multi-environment deployment workflows.'
     ],
-    technologies: ['PHP', 'Laravel', 'MySQL']
+    technologies: ['PHP', 'Laravel', 'MySQL', 'WordPress', 'Elementor',]
   },
   {
     role: 'Software Developer Intern',
