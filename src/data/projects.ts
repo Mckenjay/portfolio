@@ -25,42 +25,46 @@ export const projects: PortfolioProject[] = [
   {
     id: 'pharmacy',
     name: 'Pharmacy Management System',
-    category: 'Capstone Project',
+    category: 'Pharma-Clinic · Capstone Project',
     description:
-      'A pharmacy inventory system developed for the client to manage medicines, suppliers, stock levels, orders, and other pharmacy operations.',
+      'One of three interconnected systems developed for the same capstone client. This Laravel application supports pharmacy operations, including medicine inventory, supplier records, stock levels, orders, and related reports.',
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
     image: pharmacy,
+    highlights: ['Part of 3 connected systems', 'Inventory management']
   },
   {
     id: 'clinic',
     name: 'Clinic Appointment and Management System',
-    category: 'Capstone Project',
+    category: 'Pharma-Clinic · Capstone Project',
     description:
-      'A clinic management system developed for the same client to handle patient information, appointment scheduling, and clinic records, supporting the client’s integrated healthcare operations.',
+      'One of three interconnected systems developed for the same capstone client. The application supports patient information, appointment scheduling, clinic records, and workflows for different clinic roles.',
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
     image: clinic,
+    highlights: ['Part of 3 connected systems', 'Appointment scheduling'],
+    
   },
   {
     id: 'pos',
     name: 'Pharmacy Point of Sale (POS) System',
-    category: 'Capstone Project',
+    category: 'Pharma-Clinic · Capstone Project',
     description:
-      'A desktop-based POS module integrated with the pharmacy management system to support medicine sales, transaction processing, and pharmacy operations for the same client.',
+      'The desktop point-of-sale component of the same capstone project, developed to support pharmacy sales transactions and work alongside the pharmacy management system.',
     technologies: ['VB.NET', 'MySQL'],
     link: null,
     repository: null,
     image: pos,
+    highlights: ['Part of 3 connected systems', 'Desktop application'],
   },
   {
     id: 'fibeco-billing-inquiry',
     name: 'Billing Inquiry Application',
-    category: 'FIBECO · MIS',
+    category: 'Internship · FIBECO MIS',
     description:
-      'A client billing inquiry web application built with Laravel and Vue.js during my internship in FIBECO  with the MIS team.',
+      'A billing inquiry web application I contributed to during my software development internship at FIBECO. It provides access to monthly billing information and billing statements, with functionality for submitting power interruption complaints.',
     technologies: ['Laravel', 'PHP', 'Vue.js', 'MySQL'],
     link: null,
     repository: null,
@@ -69,20 +73,21 @@ export const projects: PortfolioProject[] = [
   {
     id: 'emotorela',
     name: 'LGU Motorela Franchising and Tracking System',
-    category: 'Project',
+    category: 'Freelance · Project-Based Development',
     description:
       ' Laravel web app for managing local government franchising applications. It tracks applicants and their documents through reviews by different offices, with features for workflows, checklists, and application paperwork.',
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
     image: lgu,
+    highlights: ['Project-based freelance work', 'Multi-office review workflow'],
   },
   {
     id: 'leave-system',
     name: 'Employee Leave Request System',
-    category: 'Project',
+    category: 'Technical Assessment',
     description:
-      ' A laravel web application for filing and managing employee leave requests.',
+      'A Laravel web application developed as part of a practical technical assessment for a job application. It demonstrates an employee leave request workflow, including submitting and managing leave requests.',
     technologies: ['Laravel', 'PHP', 'MySQL'],
     link: null,
     repository: null,
@@ -91,9 +96,9 @@ export const projects: PortfolioProject[] = [
   {
     id: 'wordpress',
     name: 'We Buy Junk Cars for Cash Website Clone',
-    category: 'Project',
+    category: 'WordPress · Practice Project',
     description:
-    'A WordPress and Elementor site clone built to master custom layouts, responsive design, and page builder workflows.',
+    'A practice website recreation built with WordPress and Elementor to explore page-builder workflows, custom layouts, and responsive design.',
     technologies: ['Wordpress', 'Elementor'],
     link: null,
     repository: null,
@@ -102,9 +107,9 @@ export const projects: PortfolioProject[] = [
   {
     id: 'ecommerce',
     name: 'Practice Project for an E-commerce Website',
-    category: 'Project',
+    category: 'WordPress · Practice Project',
     description:
-    'A practice e-commerce website built with WordPress and Elementor to explore online store functionality, product layouts, and design customization.',
+    'A practice e-commerce website built with WordPress and Elementor to explore online store layouts, product presentation, and website customization.',
     technologies: ['Wordpress', 'Elementor'],
     link: 'https://veloforge.lguhub.online',
     repository: null,
@@ -113,9 +118,9 @@ export const projects: PortfolioProject[] = [
   {
     id: 'portfolio-website',
     name: 'Personal Portfolio Website',
-    category: 'Project',
+    category: 'Personal Project',
     description:
-      'A responsive modern personal portfolio website built to showcase software development projects, technical skills, and professional experience.',
+      'A responsive modern personal portfolio website built to showcase software development projects, technical skills, and professional background.',
     technologies: ['Vue.js', 'TypeScript', 'Tailwind CSS'],
     link: null,
     repository: 'https://github.com/Mckenjay/portfolio',

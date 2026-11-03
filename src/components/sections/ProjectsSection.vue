@@ -122,16 +122,16 @@ function moveProject(direction: -1 | 1) {
                 </div>
     
                 <div class="my-auto py-3 sm:py-5">
-                <p class="mb-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-accent sm:text-[10px]">Project {{ String(activeIndex + 1).padStart(2, '0') }}</p>
                 <h3 class="max-w-2xl text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl md:text-3xl">
                     {{ activeProject.name }}
                 </h3>
                 <p class="mt-2 max-w-2xl text-xs leading-5 text-gray-400 sm:mt-3 sm:text-sm sm:leading-6">
                     {{ activeProject.description }}
                 </p>
-                <ul v-if="activeProject.highlights?.length" class="mt-3 hidden flex-wrap gap-1.5 lg:flex" aria-label="Project highlights">
+                <ul v-if="activeProject.highlights?.length" class="mt-3 flex-wrap gap-1.5 flex" aria-label="Project highlights">
                     <li v-for="highlight in activeProject.highlights" :key="highlight" class="inline-flex items-center gap-1 rounded-md border border-white/10 bg-white/3 px-2 py-1 text-[10px] text-gray-300">
-                    <Icon icon="lucide:check" class="h-3 w-3 text-accent" />{{ highlight }}
+                        <span class="h-1.5 w-1.5 rounded-full bg-accent" />
+                        {{ highlight }}
                     </li>
                 </ul>
                 </div>

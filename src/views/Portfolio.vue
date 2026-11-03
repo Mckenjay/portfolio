@@ -4,6 +4,7 @@ import Background from '@/components/Background.vue';
 import HomeSection from '@/components/sections/HomeSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import ExperienceSection from '@/components/sections/ExperienceSection.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
 </script>
 
@@ -17,6 +18,7 @@ import ContactSection from '@/components/sections/ContactSection.vue';
                 <HomeSection />
                  <AboutSection />
                 <ProjectsSection />
+                <ExperienceSection />
                 <ContactSection /> 
             </main>
         </div>
